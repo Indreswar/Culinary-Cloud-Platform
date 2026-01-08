@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Cloud Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">Culinary Cloud</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="upload.html" class="btn">Share Recipe</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Share Recipes. Tell Stories. Inspire Flavor.</h1>
+            <p>Join our community of food lovers and share your culinary masterpieces with the world.</p>
+            <br>
+            <a href="upload.html" class="btn btn-secondary">Upload a Recipe</a>
+        </section>
+
+        <h2>Latest Recipes</h2>
+        <div id="recipe-container" class="recipe-grid">
+            <!-- Recipes will be loaded here dynamically -->
+            <div class="recipe-card template" style="display:none;">
+                <img src="" alt="Recipe Image" class="recipe-image">
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Title</h3>
+                    <p class="recipe-desc">Description</p>
+                    <a href="view.html?id=" class="btn btn-secondary btn-sm">View Recipe</a>
+                </div>
+            </div>
+            
+            <!-- Loading State -->
+            <p id="loading-text">Loading delicious recipes...</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Culinary Cloud Platform. Student ID: B00959342</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Load recipes on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            loadRecipes();
+        });
+    </script>
+</body>
+</html>
